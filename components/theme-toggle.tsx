@@ -6,7 +6,7 @@ import React from 'react'
 import { useTheme } from 'next-themes'
 import { Switch } from '@/components/ui/switch'
 import { Label } from '@/components/ui/label'
-import { Infinity } from 'lucide-react'
+import { InfinityIcon } from 'lucide-react'
 
 interface MathStep {
   symbol: string
@@ -43,7 +43,8 @@ export function ThemeToggle() {
     )}, ${Math.round(255 * f(4))})`
   }
 
-  const mathColor = hslToRgb(226, 100, 50)
+  // Memoize the math color to prevent unnecessary recalculations
+  const mathColor = React.useMemo(() => hslToRgb(226, 100, 50), [])
 
   React.useEffect(() => {
     setMounted(true)
@@ -90,6 +91,14 @@ export function ThemeToggle() {
     const timeSinceLastSwitch = currentTime - lastSwitchTime.current
     lastSwitchTime.current = currentTime
 
+    // If we're in math mode, go back to light mode
+    if (theme === 'math') {
+      setPosition(0)
+      setTheme('light')
+      clearMathSteps()
+      return
+    }
+
     // Regular theme switching between light and dark
     const newPosition = position === 0 ? 1 : 0
     setPosition(newPosition)
@@ -103,15 +112,24 @@ export function ThemeToggle() {
 
       if (currentSteps < 4) {
         addMathStep(currentSteps)
+        
+        // Clear any existing timeouts
+        stepTimeouts.current.forEach((timeout) => clearTimeout(timeout))
+        stepTimeouts.current = []
+
         if (currentSteps === 3) {
+          // Show easter egg immediately when all symbols are collected
           setShowEasterEgg(true)
+          // Set a single timeout to clear everything
+          const timeout = setTimeout(clearMathSteps, 5000)
+          stepTimeouts.current.push(timeout)
+        } else {
+          // Set timeout for clearing if not completed
+          const timeout = setTimeout(clearMathSteps, 3000)
+          stepTimeouts.current.push(timeout)
         }
-        const timeout = setTimeout(clearMathSteps, 3000)
-        stepTimeouts.current.push(timeout)
-      } else {
-        clearMathSteps()
       }
-    } else if (mathSteps.length > 0 && !showEasterEgg) {
+    } else if (mathSteps.length > 0) {
       clearMathSteps()
     }
   }
@@ -120,6 +138,9 @@ export function ThemeToggle() {
     setTheme('math')
     setPosition(2)
     clearMathSteps()
+    // Clear any existing timeouts when activating math theme
+    stepTimeouts.current.forEach((timeout) => clearTimeout(timeout))
+    stepTimeouts.current = []
   }
 
   // Prevent hydration mismatch
@@ -149,7 +170,11 @@ export function ThemeToggle() {
           className="flex items-center justify-center w-8 h-8 rounded-full opacity-50 hover:opacity-100 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary"
           title="Calculate infinity"
         >
-          <Infinity size={24} strokeWidth={1.5} style={{ color: mathColor }} />
+          <InfinityIcon
+            size={24}
+            strokeWidth={1.5}
+            style={{ color: mathColor }}
+          />
         </button>
       )}
       <div className="flex items-center gap-2">
