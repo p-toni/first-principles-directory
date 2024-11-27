@@ -1,0 +1,85 @@
+# SpaceX Reusable Rockets
+
+> Challenging the assumption that rockets must be expendable by fundamentally rethinking space launch economics
+
+## Metadata
+- domain: aerospace
+- complexity: high
+- solving-approach: first-principles
+- year-solved: 2008
+
+## Categories
+- Aerospace
+- Engineering
+- Business
+
+## Chronological Flow
+1. Initial Goal → Cheaper Space Travel
+2. First Problem → Why are rockets so expensive?
+3. Analysis → Materials cost vs. price disparity (2% vs 100%)
+4. Root Cause → Single-use nature + inefficient industry practices
+5. Solution → Reusability + vertical integration
+
+## Context
+- Space industry dominated by government contractors
+- Rockets treated as single-use items since 1960s
+- Launch costs prohibitively expensive ($65M+ per launch)
+- Most innovation focused on payload capacity, not cost
+
+## Market Assumptions Challenged
+- Rockets must be expendable
+- High costs are inherent to space technology
+- Only governments can innovate in space
+- Legacy components are most reliable
+- Extensive outsourcing is efficient
+
+## First Principles Breakdown
+1. Physical/Technical Facts
+   - Rocket materials: aluminum alloys, titanium, copper, carbon fiber
+   - Raw materials cost ~2% of rocket price
+   - Launch requires escaping Earth's gravity
+   - Reentry creates extreme thermal/structural stress
+
+2. Economic Facts
+   - Materials cost/market price ratio extremely low (2%)
+   - Fuel cost only 0.3% of launch price
+   - Government cost-plus contracts encourage inefficiency
+   - Multiple subcontractor layers add overhead
+
+3. Process Analysis
+   - Traditional manufacturing wastes 90-95% of raw materials
+   - Legacy components from 1960s still in use
+   - 4-5 layers of subcontractors typical
+   - Each layer adds profit margin
+
+## Solution Development
+1. Initial Hypothesis
+   - Vertical integration to reduce overhead
+   - Modern manufacturing techniques (stir welding)
+   - Design for reusability from start
+   - In-house component development
+
+2. Experimental Validation
+   - Grasshopper Project for vertical landing
+   - Iterative design improvements
+   - Dragon capsule development
+   - Multiple test flights
+
+3. Implementation Challenges
+   - New welding techniques for high-pressure vessels
+   - Landing guidance systems
+   - Reentry thermal protection
+   - Recovery systems
+
+## Results
+- Launch cost reduced by factor of 10
+- Material efficiency improved to 90%
+- Successful rocket recovery and reuse
+- New market opportunities enabled
+
+## References
+- [“Elon Musk’s Mission to Mars,” Chris Anderson (2012)] (https://www.wired.com/2012/10/ff-elon-musk-qa)
+- [“SpaceX and Daring to Think Big, Steve Jurvetson (2015)”](https://www.youtube.com/watch?v=3aXNWGwis4w)
+- SpaceX technical documentation
+- NASA contracts and reports
+- Industry analysis reports

@@ -1,0 +1,23 @@
+# First Principles Directory
+
+> A curated directory of problems solved through first principles thinking, demonstrating how complex challenges can be broken down into fundamental truths and rebuilt from the ground up.
+
+This project aims to showcase real-world examples of first principles thinking across various domains. It provides a structured format for presenting problem-solving approaches that challenge conventional wisdom and lead to innovative solutions.
+
+## Core Pages
+
+- [Home Page](https://example.com/index.md): Overview of the First Principles Directory and featured problems
+- [About First Principles Thinking](https://example.com/about.md): Detailed explanation of first principles thinking and its applications
+- [Contribution Guidelines](https://example.com/contribute.md): Instructions for submitting new problem examples to the directory
+
+## Problem Examples
+
+- [SpaceX Reusable Rockets](https://example.com/problem/spacex-reusable-rockets.md): How SpaceX revolutionized space travel by challenging core assumptions
+- [Tesla's Battery Innovation](https://example.com/problem/tesla-battery-innovation.md): Reimagining electric vehicle batteries through first principles
+- [Amazon's AWS Infrastructure](https://example.com/problem/amazon-aws-infrastructure.md): Decomposing cloud computing needs into fundamental resources
+
+## Optional
+
+- [API Documentation](https://example.com/api.md): Details on accessing the First Principles Directory data programmatically
+- [Glossary](https://example.com/glossary.md): Definitions of key terms related to first principles thinking
+

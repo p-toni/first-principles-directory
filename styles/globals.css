@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  [data-theme='dark'] {
+    --background: 180 3% 7%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 98%;
+    --popover: 180 3% 7%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 11%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 0% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 85%;
+  }
+
+  [data-theme='math'] {
+    --background: 225 30% 12%;
+    --foreground: 210 40% 98%;
+    --card: 225 25% 16%;
+    --card-foreground: 210 40% 98%;
+    --popover: 225 25% 16%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 225 25% 24%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 225 25% 24%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 225 25% 24%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 225 25% 24%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 225 25% 24%;
+    --input: 225 25% 24%;
+    --ring: 226 100% 50%;
+  }
+}
+
+@import url('https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/fonts/Serif/cmun-serif.css');
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+}
+
+.math-symbols {
+  font-family: 'Computer Modern Serif', serif;
+  font-weight: 500;
+  font-size: 1.4em;
+  line-height: 1;
+  font-feature-settings: 'ss01' 1;
+}
+
+[data-theme='math'] {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+[data-theme='math'] h1,
+[data-theme='math'] h2,
+[data-theme='math'] h3,
+[data-theme='math'] h4,
+[data-theme='math'] h5,
+[data-theme='math'] h6 {
+  font-family: 'JetBrains Mono', monospace;
+  position: relative;
+}
+
+[data-theme='math'] h1::before,
+[data-theme='math'] h2::before,
+[data-theme='math'] h3::before {
+  content: '∑';
+  position: absolute;
+  left: -1.5em;
+  opacity: 0.3;
+  font-family: 'Computer Modern Serif', serif;
+}
+
+.math-accent {
+  font-family: 'Computer Modern Serif', serif;
+  opacity: 0.08;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.5s ease-out;
+}
+
+.math-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(133, 156, 182, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(133, 156, 182, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme='math'] * {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}

@@ -1,0 +1,93 @@
+# Printing Press Revolution
+
+> Challenging the assumption that text reproduction requires manual copying by fundamentally rethinking the physics of writing
+
+## Metadata
+- domain: information
+- complexity: high
+- solving-approach: first-principles
+- year-solved: 1440
+
+## Categories
+- Manufacturing
+- Metallurgy
+- Chemistry
+- Mechanics
+
+## Chronological Flow
+1. Initial Goal → Faster Text Reproduction
+2. First Problem → Why is writing inherently manual?
+3. Analysis → Breaking down writing into physical components (shape transfer + pigment)
+4. Root Cause → Lack of systematic replication method + inefficient ink transfer
+5. Solution → Movable type + oil-based ink + mechanical pressure
+
+## Context
+- Text reproduction monopolized by monastic scribes
+- Single Bible required 3 years to copy
+- Books cost equivalent of average worker's 3-year salary
+- Limited literacy due to text scarcity
+- Knowledge transfer bottlenecked by copying speed
+
+## Market Assumptions Challenged
+- Text must be manually written
+- Quality requires skilled calligraphy
+- Each copy must be produced individually
+- High costs are inherent to book production
+- Scarcity of books is natural
+
+## First Principles Breakdown
+1. Physical/Technical Facts
+   - Letters are shapes that transfer pigment
+   - Metal can be cast into precise, durable shapes
+   - Pressure can transfer ink uniformly
+   - Oil-based ink adheres better than water-based
+   - Mirror images create correct impressions
+
+2. Material Properties
+   - Lead/tin/antimony alloy optimal for type
+   - Paper accepts ink better than vellum
+   - Oil ink doesn't bleed like water-based ink
+   - Metal type withstands repeated pressure
+   - Different metals have different melting points
+
+3. Process Analysis
+   - Traditional copying wastes 95% of labor time
+   - Letter shapes are finite and reusable
+   - Consistent pressure produces uniform impression
+   - Type can be rearranged infinitely
+   - Mass production requires standardization
+
+## Solution Development
+1. Initial Hypothesis
+   - Create reusable letter molds
+   - Develop stable metal alloy
+   - Design mechanical pressure system
+   - Formulate new ink composition
+
+2. Technical Innovations
+   - Hand mold for consistent type casting
+   - Lead-tin-antimony alloy (optimal hardness)
+   - Modified wine press mechanism
+   - Oil-based ink formula
+
+3. Implementation Challenges
+   - Achieving uniform type height
+   - Preventing metal oxidation
+   - Maintaining ink consistency
+   - Creating precise alignment system
+
+## Results
+- Production time reduced from 3 years to 3 months per Bible
+- Cost reduced by approximately 97%
+- 20 million books printed in Europe by 1500
+- Book price dropped from 3 years' to 3 months' wages
+- Single press could produce 3,600 pages per workday
+- Type pieces could be reused thousands of times
+- Created foundation for information revolution
+
+## References
+- "The Printing Press as an Agent of Change" (Eisenstein, 1980)
+- "The Coming of the Book" (Febvre & Martin, 1976)
+- "Johann Gutenberg and His Bible" (Kapr, 1996)
+- "The Nature of the Book" (Johns, 1998)
+- Technical analysis of surviving Gutenberg artifacts
