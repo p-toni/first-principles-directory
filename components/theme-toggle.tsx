@@ -112,7 +112,7 @@ export function ThemeToggle() {
 
       if (currentSteps < 4) {
         addMathStep(currentSteps)
-        
+
         // Clear any existing timeouts
         stepTimeouts.current.forEach((timeout) => clearTimeout(timeout))
         stepTimeouts.current = []
