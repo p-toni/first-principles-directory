@@ -41,7 +41,7 @@ export function Footer() {
         </div>
         <div className="flex items-center">
           <a
-            href="https://github.com/p-toni/fp-website"
+            href="https://github.com/p-toni/first-principles-directory"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-muted-foreground hover:text-foreground"
